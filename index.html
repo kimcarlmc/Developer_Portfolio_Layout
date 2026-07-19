@@ -58,7 +58,17 @@
 
           <a href="#contact" class="btn btn-outline">Contact</a>
         </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          ☰
+        </button>
       </div>
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main>
@@ -112,37 +122,76 @@
 
       <hr class="section-divider" />
 
-      <section class="tech-section">
+      <section class="tech-section" id="stack">
         <div class="tech-inner">
           <p class="section-label">
             Tech Stack
             <span class="label-line"></span>
           </p>
- 
+
           <div class="tech-badges">
-            <span class="tech-badge"><span class="dot" style="background:#3178c6"></span>TypeScript</span>
-            <span class="tech-badge"><span class="dot" style="background:#61dafb"></span>React</span>
-            <span class="tech-badge"><span class="dot" style="background:#ffffff"></span>Next.js</span>
-            <span class="tech-badge"><span class="dot" style="background:#3c873a"></span>Node.js</span>
-            <span class="tech-badge"><span class="dot" style="background:#00acd7"></span>Go</span>
-            <span class="tech-badge"><span class="dot" style="background:#3776ab"></span>Python</span>
-            <span class="tech-badge"><span class="dot" style="background:#ef4444"></span>Rust</span>
-            <span class="tech-badge"><span class="dot" style="background:#336791"></span>PostgreSQL</span>
-            <span class="tech-badge"><span class="dot" style="background:#dc2626"></span>Redis</span>
-            <span class="tech-badge"><span class="dot" style="background:#2496ed"></span>Docker</span>
-            <span class="tech-badge"><span class="dot" style="background:#326ce5"></span>Kubernetes</span>
-            <span class="tech-badge"><span class="dot" style="background:#38bdf8"></span>Tailwind CSS</span>
-            <span class="tech-badge"><span class="dot" style="background:#e535ab"></span>GraphQL</span>
-            <span class="tech-badge"><span class="dot" style="background:#f59e0b"></span>AWS</span>
-            <span class="tech-badge"><span class="dot" style="background:#ffffff"></span>Vercel</span>
-            <span class="tech-badge"><span class="dot" style="background:#818cf8"></span>Prisma</span>
+            <span class="tech-badge"
+              ><span class="dot" style="background: #3178c6"></span
+              >TypeScript</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #61dafb"></span>React</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #ffffff"></span
+              >Next.js</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #3c873a"></span
+              >Node.js</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #00acd7"></span>Go</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #3776ab"></span>Python</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #ef4444"></span>Rust</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #336791"></span
+              >PostgreSQL</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #dc2626"></span>Redis</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #2496ed"></span>Docker</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #326ce5"></span
+              >Kubernetes</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #38bdf8"></span>Tailwind
+              CSS</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #e535ab"></span
+              >GraphQL</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #f59e0b"></span>AWS</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #ffffff"></span>Vercel</span
+            >
+            <span class="tech-badge"
+              ><span class="dot" style="background: #818cf8"></span>Prisma</span
+            >
           </div>
         </div>
       </section>
 
       <hr class="section-divider" />
 
-      <section class="work-section">
+      <section class="work-section" id="work">
         <div class="work-inner">
           <p class="section-label">
             Selected Work
@@ -165,7 +214,9 @@
               </div>
 
               <p class="project-desc">
-                Real-time collaborative code editor with operational transforms, presence awareness, and sub-50ms sync latency across 100+ concurrent users.
+                Real-time collaborative code editor with operational transforms,
+                presence awareness, and sub-50ms sync latency across 100+
+                concurrent users.
               </p>
 
               <div class="project-tags">
@@ -191,7 +242,9 @@
               </div>
 
               <p class="project-desc">
-                Opinionated developer toolchain that scaffolds production-ready services with observability, auth, and CI pipelines pre-wired in under 30 seconds.
+                Opinionated developer toolchain that scaffolds production-ready
+                services with observability, auth, and CI pipelines pre-wired in
+                under 30 seconds.
               </p>
 
               <div class="project-tags">
@@ -217,7 +270,9 @@
               </div>
 
               <p class="project-desc">
-                Edge-first API gateway with rate limiting, JWT validation, and per-route caching. Deploys as a single Wasm binary to Cloudflare Workers.
+                Edge-first API gateway with rate limiting, JWT validation, and
+                per-route caching. Deploys as a single Wasm binary to Cloudflare
+                Workers.
               </p>
 
               <div class="project-tags">
@@ -233,10 +288,10 @@
 
       <hr class="section-divider" />
 
-      <section class="github-section">
+      <section class="github-section" id="github">
         <div class="github-inner">
           <div class="github-header">
-            <p class="section-label" style="margin-bottom:0">
+            <p class="section-label" style="margin-bottom: 0">
               GitHub Activity
               <span class="label-line"></span>
             </p>
@@ -293,25 +348,63 @@
               <span class="legend-box level-4"></span>
               <span>More</span>
             </div>
-            
-          </div>
-
-          <div class="github-stats-row">
-            <div class="github-stat-card">
-              <span class="github-stat-number">18 days</span>
-              <span class="github-stat-label">Current streak</span>
-            </div>
-            <div class="github-stat-card">
-              <span class="github-stat-number">47 days</span>
-              <span class="github-stat-label">Longest streak</span>
-            </div>
-            <div class="github-stat-card">
-              <span class="github-stat-number">84</span>
-              <span class="github-stat-label">Total repos</span>
+            <hr class="section-divider section-divider--tight" />
+            <div class="github-stats-row">
+              <div class="github-stat-card">
+                <span class="github-stat-number">18 days</span>
+                <span class="github-stat-label">Current streak</span>
+              </div>
+              <div class="github-stat-card">
+                <span class="github-stat-number">47 days</span>
+                <span class="github-stat-label">Longest streak</span>
+              </div>
+              <div class="github-stat-card">
+                <span class="github-stat-number">84</span>
+                <span class="github-stat-label">Total repos</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <hr class="section-divider" />
+
+      <section class="cta-section" id="contact">
+        <div class="cta-inner">
+          <div class="cta-card">
+            <div class="cta-text">
+              <h2 class="cta-heading">Let's build something.</h2>
+              <p class="cta-sub">
+                Open to senior and staff engineering roles — remote preferred.
+              </p>
+            </div>
+            <a href="#contact" class="btn btn-solid cta-button"
+              >Send a message</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <a href="#" class="logo">devname.dev</a>
+            <div class="footer-socials">
+              <a href="#">GitHub</a>
+              <a href="#">Twitter</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">Email</a>
+            </div>
+          </div>
+
+          <hr class="section-divider" />
+
+          <div class="footer-bottom">
+            <p>© 2024 Dev Name. All rights reserved.</p>
+            <p>Built with HTML, CSS &amp; JavaScript</p>
+          </div>
+        </div>
+      </footer>
     </main>
     <script src="script.js"></script>
   </body>
