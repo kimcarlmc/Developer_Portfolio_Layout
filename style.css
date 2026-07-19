@@ -1,4 +1,12 @@
 /* Base Setup */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 90px; 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -530,15 +538,15 @@ body {
   background-color: var(--color-purple);
 }
  
+.section-divider--tight{
+  margin: 0.5rem auto;
+}
+
 .github-stats-row {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
 }
  
-.github-stat-card {
-  flex: 1;   
-  border: 1px solid var(--color-border);
+.github-stat-card {  
   border-radius: 8px;
   padding: 1rem 1.5rem;
   display: flex;
@@ -547,28 +555,26 @@ body {
 }
  
 .github-stat-number {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
  
 .github-stat-label {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--color-text-muted);
   font-family: var(--font-mono);
 }
  
-/* wraps everything so month labels + day labels + grid align together */
 .heatmap-container {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
  
-/* month labels row — roughly spaced across the top */
 .month-labels {
   display: flex;
   justify-content: space-between;
-  padding-left: 28px;   /* lines up with grid start, leaving room for day-labels column */
+  padding-left: 28px;   
   font-size: 0.7rem;
   color: var(--color-text-muted);
   font-family: var(--font-mono);
@@ -588,4 +594,192 @@ body {
   color: var(--color-text-muted);
   font-family: var(--font-mono);
   width: 28px;
+}
+
+/* CTA banner section */
+.cta-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.cta-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;  
+  gap: 1.5rem;
+  background: linear-gradient(90deg, #572b7f09 0%, #572b7f09 80%, #a955f713 100%);
+  border: 1px solid #a855f733;
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+.cta-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cta-sub {
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.cta-button {
+  white-space: nowrap;   
+}
+
+/* NEW: Footer */
+.site-footer {
+  padding: 2rem 0 3rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.footer-top {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-socials {
+  font-family: var(--font-mono);
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.footer-socials a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--color-text);
+}
+
+.footer-bottom {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color:  #374046;
+  font-family: var(--font-mono);
+  gap: 0.5rem;
+}
+
+/* Web Responsive CSS*/
+.menu-toggle {
+  display: none;   
+  background: none;
+  border: none;
+  color: var(--color-purple);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;   
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 3rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.mobile-menu a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.mobile-menu a:hover{
+  color: var(--color-text)
+}
+
+.mobile-menu.open {
+  display: flex;   
+}
+
+
+
+/* Media Responsive */
+/* Below 768px: switch to mobile navbar layout */
+@media (max-width: 768px) {
+  .nav-right {
+    display: none;   
+  }
+
+  .menu-toggle {
+    display: block;   
+  }
+}
+
+/* Hides the burger menu when changing to bigger screen size */
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Responsive Hero — below 768px (phones/small tablets) */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem;   
+  }
+
+  .hero-buttons {
+    flex-direction: column;   
+    align-items: stretch;      
+  }
+
+  .hero-inner {
+    padding: 4rem 1.5rem 2rem;   
+  }
+
+  .stats-row {
+    gap: 1.5rem;     
+    flex-wrap: wrap;   
+  }
+
+  .stat-number {
+    font-size: 1.2rem;  
+  }
+}
+
+/* Extra-narrow screens (320px–360px range) */
+@media (max-width: 360px) {
+  .hero-heading {
+    font-size: 2rem;  
+  }
+
+  .hero-inner,
+  .stats-inner,
+  .tech-inner,
+  .work-inner,
+  .github-inner,
+  .cta-inner,
+  .footer-inner {
+    padding-left: 1rem;   
+    padding-right: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.1rem;
+  }
+
+  .cta-heading {
+    font-size: 1.25rem; 
+  }
 }
